@@ -42,11 +42,28 @@ def showJTheta(diff_value):
 
 # Plot the actual data points and the fitted curve. 
 def showlinercurve(theta, sample_training_set):
-    x, y = sample_training_set[:, 1], sample_training_set[:, 2] z = theta[0] + theta[1] * x
+    x, y = sample_training_set[:, 1], sample_training_set[:, 2] 
+    z = theta[0] + theta[1] * x
     plt.scatter(x, y, color='b', marker='x',label="sample data") 
-    plt.plot(x, z, 'r', color="r",label="regression curve") plt.xlabel('x')
+    plt.plot(x, z, 'r', color="r",label="regression curve") 
+    plt.xlabel('x')
     plt.ylabel('y')
-    plt.title('liner regression curve') plt.legend()
+    plt.title('liner regression curve') 
+    plt.legend()
     plt.show()
+# Read the dataset.
+training_data_include_y, training_x, y = get_training_data("./ML/02/lr2_data.txt") 
+# Obtain the numbers of samples and features, respectively.
+sample_count, feature_count = training_x.shape 
+# Define the learning step α.
+alpha = 0.01
+# Initialize θ.
+theta = init_theta(feature_count)
+# Obtain the final parameter θ and cost.
+result_theta,Jthetas = gradient_descending(training_x, y, theta, alpha) # Display the parameter.
+print("w:{}".format(result_theta[0][0]),"b:{}".format(result_theta[1][0])) 
+showJTheta(Jthetas)
+showlinercurve(result_theta, training_data_include_y)
+
 
     

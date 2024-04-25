@@ -1,0 +1,13 @@
+%caso base, la longitud de una lista vacía
+longitud([], 0).
+%Se descompone la lista en su primer elemento y el resto de la lista (H/T)
+%N->longitud de la lista
+longitud([_|T], N) :- % hace la llamada recusiva, calcula ñla longitud de la cola de la lista
+    %N1: almacena la longitud de la cola
+    longitud(T, N1), 
+
+    N is N1 + 1. %N sumando 1 a N1. Es decir, añade 1 a la longitud de la cola de la lista para obtener la longitud total de la lista original
+    %N longitud de la lista original
+
+%CONSULTA: longitud([a, b, c, d], N).
+%RESPUESTA:4

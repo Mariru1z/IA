@@ -3,9 +3,12 @@ sumar_lista([], 0).
 %se descompone la lista en su primer elemento H y el resto de la lista T. S será la suma total de los elementos de la lista.
 sumar_lista([H|T], S) :-
     %se llama recursivamente a sumar_lista con el resto de la lista T para obtener la suma ST de los elementos restantes.
-    sumar_lista(T, ST),
+    sumar_lista(T, ST), %s no tiene valor, se manda a llamar a suma_lista, genera la nueva direccion del apuntador 
     %
     S is H + ST.
 
 
 %consulta: sumar_lista([1, 2, 3, 4, 5], S).
+%[2,3] = dos es H y 3 es T
+%stack de recursividad, o de apuntadores. por ello em primer apuntado se guarda al final, y se va a la nueva llamada, y en stak se guarda 2.
+%se mannda a llamar a la suma_lista con una lista vacía, por ella mada 0, con el punto . termina la ejecución.

@@ -1,0 +1,27 @@
+tiene facilidada para hacer procesos de recursividad
+
+#listas en prolog
+
+-factorial(!)->usa un algoritmo recursivo
+7!=7*6!
+6!=6*5!
+5!=5*4!
+4!=4*3!
+3!=3*2!
+2!=2*1!
+1!=1*0!
+0!=1
+caso base= 0 o 1
+
+%TODOS LO HECHOS SE RESLIZAN DE MANERA CONGRUENTE
+
+%EL TAMAÑO MAXIMO DE BITS DEPENDE DEL ESPACIO DE MEMORIA QUE SE TENGA
+
+tarea lista de numeros
+lista de n numeros hacer la suma de los numeros(en prolog)
+
+
+
+
+
+

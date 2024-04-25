@@ -1,0 +1,9 @@
+%caso base, Indica que la suma de una lista vacía es 0.
+sumar_lista([], 0).
+%se descompone la lista en su primer elemento H y el resto de la lista T. S será la suma total de los elementos de la lista.
+sumar_lista([H|T], S) :-
+    %se llama recursivamente a sumar_lista con el resto de la lista T para obtener la suma ST de los elementos restantes.
+    sumar_lista(T, ST),
+    %
+    S is H + ST.
+    
